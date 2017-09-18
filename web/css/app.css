@@ -149,3 +149,11 @@ ul{
     margin-right: auto;
     margin-left: auto;
 }
+
+#abouttext{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: justify;
+}
