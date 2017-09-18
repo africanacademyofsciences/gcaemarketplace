@@ -44,6 +44,7 @@ ul{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 .nav .left{
     float: left;
@@ -303,4 +304,5 @@ footer .prefooter-right {
     left: 5%;
     opacity: 0.8;
     filter: alpha(opacity=50);
+
 }
