@@ -136,3 +136,16 @@ ul{
 }
 /*********MEDIA QUERY END**********/
 
+.hero-welcome {
+  background: url('../img/gca.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 900px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
