@@ -37,7 +37,7 @@ ul{
 }
 
 /****************************NAV BAR************************************/
-  
+
 .nav{
     background: #ffffff;
     min-height: 50px;
@@ -145,10 +145,10 @@ ul{
 /*********MEDIA QUERY END**********/
 
 .hero-welcome {
-  background: url('../img/gca.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 900px;
+    background: url('../img/gca.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 900px;
 }
 
 .container {
