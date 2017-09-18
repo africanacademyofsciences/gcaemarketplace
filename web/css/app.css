@@ -169,7 +169,7 @@ ul{
 /*footer*/
 
 footer {
-    background: #134e89;
+    background: #003A70;
     color: #fff;
     padding: 50px 0;
 }
@@ -233,14 +233,14 @@ footer .footer-menu {
 }
 
 footer .footer-menu ul li a:hover {
-    color: #2086c7;
+    color: #D08B0B;
 }
 footer .footer-menu ul li a {
     font-size: 13px;
     color: #fff;
 }
 footer a:hover {
-    color: #35ace0;
+    color: #D08B0B;
 }
 a:focus, a:hover {
     outline: 0;
