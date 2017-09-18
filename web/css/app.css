@@ -57,9 +57,10 @@ ul{
     display: block;
     padding: 9px 15px;
     line-height: 30px;
+    font-size: 20px;
 }
 .nav .left li a:hover{
-    color: #003A70;
+    color: #D08B0B;
 }
 
 .nav .right{
@@ -74,9 +75,10 @@ ul{
     display: block;
     padding: 9px 15px;
     line-height: 30px;
+    font-size: 20px;
 }
 .nav .right li a:hover{
-    color: #003A70;
+    color: #D08B0B;
 }
 
 .toggle-nav{
@@ -275,4 +277,30 @@ footer .disclaimer-footer p {
 
 footer .prefooter-right {
     text-align: left;
+}
+
+
+.in-slider-caption {
+    padding: 50px 60px;
+}
+
+.slide-content {
+    margin-top: -20px;
+    color: #fff;
+}
+
+
+.info {
+    width: 610px;
+    border: 25px;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 15px;
+    height: 350px;
+    background-color: #DEB200;
+    position: absolute;
+    top: calc(50% - 25%);
+    left: 5%;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
 }
