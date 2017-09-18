@@ -310,3 +310,46 @@ footer .prefooter-right {
 #shoppingbasket{
     color: #003A70;
 }
+
+/*sign up page*/
+.page-opener.magenta {
+    background-color: #D08B0B;
+}
+
+.page-opener {
+    padding: 175px 0 50px;
+    background-repeat: repeat;
+}
+
+.page-opener.magenta .page-opener-content {
+    border-color: #43a1af;
+}
+.page-opener .page-opener-content {
+    border-width: 12px;
+    border-style: solid;
+    padding: 10px 30px 20px;
+}
+
+
+.page-opener .page-opener-content h1 {
+    font-size: 33px;
+}
+.page-opener .page-opener-content h1 {
+    line-height: 1.1;
+    color: #fff;
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+.tml {
+    max-width: 420px;
+}
+
+.tml .message {
+    border: 1px solid #e6db55;
+    background-color: #ffffe0;
+}
+.tml .error, .tml .message {
+    color: #333;
+    padding: 0.5em;
+}
