@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pledges| E-Market Place</title>
+        <title>Featured Projects| E-Market Place</title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </nav>
-        <div id="app" class="grid-container fluid">
+        <div id="app" class="container">
             <h1>Featured Projects</h1>
             <!--row 1-->
             <div class="grid-x">
@@ -58,18 +58,22 @@
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
             </div>
             <!--row 2-->
@@ -77,26 +81,32 @@
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
             </div>
             <!--row 3-->
@@ -104,26 +114,32 @@
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3>Title of Project</h3>
-                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                        parturient montes, nascetur ridiculus mus. Donec quam felis u
-                    </p>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
