@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/app.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <!--fonts-->
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
         <!--font-awsome-->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!--css animate-->
@@ -38,10 +38,9 @@
         <div id="app" class="row container">
             <section class="page-opener magenta">
                 <div class="container">
-                    <div class="small-8 columns">
+                    <div class="large-6 columns">
                         <div class="page-opener-content">
-                            <h1>Register</h1>
-                            <!-- <h2>An Unprecedented Global<br/>Movement to Save Lives</h2> -->
+                            <h1 style="font-weight: 900;">Register</h1>
                         </div>
                     </div>
                 </div>
@@ -50,9 +49,10 @@
                 <!-- SINGLE SECTION -->
                 <section class="block-txt">
                     <div class="container">
+                        <br>
                         <div class="tml tml-register" id="theme-my-login">
                             <p class="message">Register For This Site</p>
-                            <form action="" method="POST" autocomplete="off" name="register" onsubmit="">
+                            <form action="" method="POST" autocomplete="off" name="register" onsubmit="" >
                                 <fieldset>
                                     <label>USERNAME</label>
                                     <input type="text" name="username" id="username" placeholder="USERNAME">
@@ -61,15 +61,15 @@
                                     <label>PASSWORD</label>
                                     <input type="password" name="password" id="password" placeholder="PASSWORD">
                                 </fieldset>
-                                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                                <br>
-                                <button type="submit" class="button secondary">REGISTER</button>
+                                <div class="g-recaptcha" data-sitekey="6LcXLzEUAAAAABHVpRm1GgfuXjhXzVGAWqy7EJ4H"></div>
+                                <p class="tml-registration-confirmation" id="reg_passmail">Registration confirmation will be e-mailed to you.</p>
+                                <p class="tml-submit-wrap"><button type="submit" class="button large expanded secondary">REGISTER</button></p>
                             </form>
-
+                            <ul class="tml-action-links">
+                                <li><a href="#" rel="nofollow">Log In</a></li>
+                                <li><a href="#" rel="nofollow">Lost Password</a></li>
+                            </ul>
                         </div>
-
-
-
                     </div>
                 </section>
             </section>
