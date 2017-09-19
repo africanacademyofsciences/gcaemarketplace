@@ -1,5 +1,5 @@
 <%-- 
-    Document   : pledges
+    Document   : FEATURED PROJECTS
     Created on : Sep 19, 2017, 3:06:48 PM
     Author     : kimaiga
 --%>
@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Featured Projects| E-Market Place</title>
+        <title>FEATURED PROJECTS| E-Market Place</title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -33,7 +33,7 @@
                     </ul>
                     <ul class="right">
                         <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> About</a></li>
-                        <li><a data-scroll href="#"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
+                        <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
                         <li><a href="register.html"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Login/SignUp</a></li>
@@ -42,7 +42,7 @@
             </div>
         </nav>
         <div id="app" class="container">
-            <h1 style="color: #003A70; font-weight: 500;">Featured Projects <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i></h1>
+            <h1 style="color: #003A70; font-weight: 500;">FEATURED PROJECTS <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i></h1>
             <!--row 1-->
             <div class="grid-x">
                 <div class="large-4 small-12 cell">
@@ -154,7 +154,7 @@
                     <div class="large-12 columns">
                         <ul>
                             <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> ABOUT</a></li>
-                            <li><a data-scroll href=""><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> PLEDGES</a></li>
+                            <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> FEATURED PROJECTS</a></li>
                             <li><a data-scroll href=""><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> NEWS &amp; EVENTS</a></li>
                             <li><a data-scroll href=""><i class="fa fa-users fa-lg" aria-hidden="true"></i> PARTNERS</a></li>
                         </ul>
