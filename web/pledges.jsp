@@ -41,17 +41,89 @@
                 </div>
             </div>
         </nav>
-        <div id="app" class="cell container">
+        <div id="app" class="grid-container fluid">
             <h1>Featured Projects</h1>
+            <!--row 1-->
             <div class="grid-x">
                 <div class="large-4 small-12 cell">
-                    lol
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <div class="projectdescription">
+                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                            parturient montes, nascetur ridiculus mus. Donec quam felis u
+                        </p>
+                    </div>
                 </div>
                 <div class="large-4 small-12 cell">
-                    lol
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
                 </div>
                 <div class="large-4 small-12 cell">
-                    lol
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+            <!--row 2-->
+            <div class="grid-x">
+                <div class="large-4 small-12 cell">
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+                <div class="large-4 small-12 cell">
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+                <div class="large-4 small-12 cell">
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+            <!--row 3-->
+            <div class="grid-x">
+                <div class="large-4 small-12 cell">
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+                <div class="large-4 small-12 cell">
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+                <div class="large-4 small-12 cell">
+                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                    <h3>Title of Project</h3>
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
                 </div>
             </div>
         </div>
