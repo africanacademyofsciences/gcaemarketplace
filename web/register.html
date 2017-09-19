@@ -4,18 +4,54 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AESA Grand Challenges Africa | E-Market Place</title>
+        <title>Register |GC Africa E-Market Place</title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <!--fonts-->
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-        <!--font-awsome-->
+        <!--font-awesome-->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!--css animate-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+        <!--Recaptch API-->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function trim(s)
+            {
+                return s.replace(/^\s*/, "").replace(/\s*$/, "");
+            }
 
+            function validateEmail(emailValue)
+            {
+                var objRegExp = /(^[a-z]([a-z_\.]*)@([a-z_\.]*)([.][a-z]{3})$)|(^[a-z]([a-z_\.]*)@([a-z_\.]*)(\.[a-z]{3})(\.[a-z]{2})*$)/i;
+
+                return objRegExp.test(emailValue);
+            }
+
+            function validateForm()
+            {
+                var str=/^[A-Za-z][.A-Za-z ]{0,100}$/;
+
+		if((trim(document.frmLogin.username.value)=="") || str.test(trim(document.frmLogin.username.value))==false)
+		{
+			alert("Please fill your username and it should be characters only");
+			document.frmLogin.username.focus();
+			return false;
+		}
+                else if((trim(document.frmLogin.email.value)=="") || validateEmail(document.frmLogin.email)==false)
+		{
+			alert("Please fill email value and should be email format");
+			document.frmLogin.email.focus();
+			return false;
+		}
+            }
+
+            function init()
+            {
+                document.frmLogin.login.focus();
+            }
+        </script>
     </head>
     <body>
         <nav class="nav">
@@ -52,14 +88,14 @@
                         <br>
                         <div class="tml tml-register" id="theme-my-login">
                             <p class="message">Register For This Site or <a href="#">Log in</a></p>
-                            <form action="" method="POST" autocomplete="off" name="register" onsubmit="" >
+                            <form action="" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
                                 <fieldset>
                                     <label>USERNAME</label>
                                     <input type="text" name="username" id="username" placeholder="USERNAME">
                                 </fieldset>
                                 <fieldset>
-                                    <label>PASSWORD</label>
-                                    <input type="password" name="password" id="password" placeholder="PASSWORD">
+                                    <label>EMAIL</label>
+                                    <input type="email" name="password" id="email" placeholder="EMAIL">
                                 </fieldset>
                                 <div class="g-recaptcha" data-sitekey="6LcXLzEUAAAAABHVpRm1GgfuXjhXzVGAWqy7EJ4H"></div>
                                 <p class="tml-registration-confirmation" id="reg_passmail">Registration confirmation will be e-mailed to you.</p>
