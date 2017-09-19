@@ -42,12 +42,12 @@
             </div>
         </nav>
         <div id="app" class="container">
-            <h1>Featured Projects</h1>
+            <h1 style="color: #003A70; font-weight: 500;">Featured Projects <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i></h1>
             <!--row 1-->
             <div class="grid-x">
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -57,7 +57,7 @@
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -67,7 +67,7 @@
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -76,11 +76,12 @@
                     </div>
                 </div>
             </div>
+            <hr>
             <!--row 2-->
             <div class="grid-x">
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -90,7 +91,7 @@
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -100,7 +101,7 @@
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -109,11 +110,12 @@
                     </div>
                 </div>
             </div>
+            <hr>
             <!--row 3-->
             <div class="grid-x">
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -123,7 +125,7 @@
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 
@@ -133,7 +135,7 @@
                 </div>
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3>Title of Project</h3>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
                         <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
                             Aenean massa. Cum sociis natoque penatibus et magnis dis 

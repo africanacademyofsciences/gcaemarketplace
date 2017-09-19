@@ -452,3 +452,11 @@ footer .prefooter-right {
 .projectdescription{
     width: 300px;
 }
+
+.projecttitle{
+    color: #D08B0B;
+}
+
+.projecttitle:hover{
+    color: #003A70;
+}
