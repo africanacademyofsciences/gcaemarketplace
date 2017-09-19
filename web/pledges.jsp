@@ -41,10 +41,20 @@
                 </div>
             </div>
         </nav>
-
-
-
-
+        <div id="app" class="cell container">
+            <h1>Featured Projects</h1>
+            <div class="grid-x">
+                <div class="large-4 small-12 cell">
+                    lol
+                </div>
+                <div class="large-4 small-12 cell">
+                    lol
+                </div>
+                <div class="large-4 small-12 cell">
+                    lol
+                </div>
+            </div>
+        </div>
         <!--footer-->
         <footer class="animated fadeIn">
             <div class="container">
