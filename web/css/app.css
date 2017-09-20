@@ -340,14 +340,14 @@ footer .prefooter-right {
 
 
 .info {
-    width: 610px;
+    width: auto;
     border: 25px;
     padding: 25px;
     margin: 25px;
-    border-radius: 15px;
-    height: 350px;
+    border-radius: 8px;
+    height: 200px;
     background-color: #DEB200;
-    position: absolute;
+    position: fixed;
     top: calc(50% - 25%);
     left: 5%;
     opacity: 0.8;
