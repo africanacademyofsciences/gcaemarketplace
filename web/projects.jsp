@@ -42,9 +42,10 @@
             </div>
         </nav>
         <div id="app" class="container">
-            <h1 style="color: #003A70; font-weight: 500;">FEATURED PROJECTS <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i></h1>
+            <h1 style="color: #003A70; font-weight: 500; text-align: center;">FEATURED PROJECTS <i class="fa fa-clipboard" aria-hidden="true"></i></h1>
+            <br>
             <!--row 1-->
-            <div class="grid-x">
+            <div class="container grid-x">
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
@@ -78,7 +79,7 @@
             </div>
             <hr>
             <!--row 2-->
-            <div class="grid-x">
+            <div class="container grid-x">
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
@@ -112,7 +113,7 @@
             </div>
             <hr>
             <!--row 3-->
-            <div class="grid-x">
+            <div class="container grid-x">
                 <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
@@ -151,7 +152,7 @@
                 <p style="text-align: center;"><span class="si">For more information on <em>The Grand Challenges Africa E-Marketplace</em> or for general inquiries, </span><a href="mailto:GCAfrica@aasciences.ac.ke" style="font-size: 17px;"> <i class="fa fa-envelope-o" aria-hidden="true"></i>Contact now</a></p>
                 <div class="clearfix"></div>
                 <div class="footer-menu">
-                    <div class="large-12 columns">
+                    <div class="large-12 cell">
                         <ul>
                             <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> ABOUT</a></li>
                             <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> FEATURED PROJECTS</a></li>
