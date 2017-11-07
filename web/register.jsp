@@ -1,3 +1,10 @@
+<%-- 
+    Document   : register
+    Created on : Nov 7, 2017, 10:41:59 AM
+    Author     : kimaiga
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
     <head>
@@ -31,20 +38,19 @@
 
             function validateForm()
             {
-                var str=/^[A-Za-z][.A-Za-z ]{0,100}$/;
+                var str = /^[A-Za-z][.A-Za-z ]{0,100}$/;
 
-		if((trim(document.frmLogin.username.value)=="") || str.test(trim(document.frmLogin.username.value))==false)
-		{
-			alert("Please fill your username and it should be characters only");
-			document.frmLogin.username.focus();
-			return false;
-		}
-                else if((trim(document.frmLogin.email.value)=="") || validateEmail(document.frmLogin.email)==false)
-		{
-			alert("Please fill email value and should be email format");
-			document.frmLogin.email.focus();
-			return false;
-		}
+                if ((trim(document.frmLogin.username.value) == "") || str.test(trim(document.frmLogin.username.value)) == false)
+                {
+                    alert("Please fill your username and it should be characters only");
+                    document.frmLogin.username.focus();
+                    return false;
+                } else if ((trim(document.frmLogin.email.value) == "") || validateEmail(document.frmLogin.email) == false)
+                {
+                    alert("Please fill email value and should be email format");
+                    document.frmLogin.email.focus();
+                    return false;
+                }
             }
 
             function init()
@@ -86,7 +92,7 @@
                         <br>
                         <div class="tml tml-register" id="theme-my-login">
                             <p class="message">Register For This Site or <a href="login.html">Log in</a></p>
-                            <form action="" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
+                            <form action="regGCAemarketplace.jsp" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
                                 <fieldset>
                                     <label>USERNAME</label>
                                     <input type="text" name="username" id="username" placeholder="USERNAME">
@@ -150,3 +156,4 @@
         </script> 
     </body>
 </html>
+

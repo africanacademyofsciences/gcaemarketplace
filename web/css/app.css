@@ -347,7 +347,7 @@ footer .prefooter-right {
     border-radius: 8px;
     height: 200px;
     background-color: #DEB200;
-    position: fixed;
+    position: absolute;
     top: calc(50% - 25%);
     left: 5%;
     opacity: 0.8;
