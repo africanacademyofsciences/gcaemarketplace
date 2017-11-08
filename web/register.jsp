@@ -102,8 +102,18 @@
                                     <label>EMAIL</label>
                                     <input type="email" name="regemail" id="email" placeholder="EMAIL">
                                 </fieldset>
+                                <h6>User Login Information</h6>
+                                <fieldset>
+                                    <label>Password</label>
+                                    <input type="password" name="password" id="password" placeholder="PASSWORD">
+                                </fieldset>
+                                <fieldset>
+                                    <label>Confirm password*</label>
+                                    <input type="password" name="confirmedpassword" id="password" placeholder="PASSWORD">
+                                </fieldset>
                                 <div class="g-recaptcha" data-sitekey="6LcXLzEUAAAAABHVpRm1GgfuXjhXzVGAWqy7EJ4H"></div>
-                                <p class="tml-registration-confirmation" id="reg_passmail">Registration confirmation will be e-mailed to you.</p>
+                                <br>
+                                <!--<p class="tml-registration-confirmation" id="reg_passmail">Registration confirmation will be e-mailed to you.</p>-->
                                 <p class="tml-submit-wrap"><button type="submit" class="button large expanded secondary">REGISTER</button></p>
                             </form>
                             <a href="" class="label-link" style="font-size: 17px;">Forgot password?</a>
