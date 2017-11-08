@@ -6,41 +6,17 @@
 
     PreparedStatement psInsert = null;
 
-    String sFirstName = request.getParameter("sFirstName");
-    String sLastName = request.getParameter("sLastName");
-    String iCountryID = request.getParameter("iCountryID");
-    String iCityID = request.getParameter("iCityID");
-    String iLocation = request.getParameter("iLocation");
-    String sRegEmail = request.getParameter("sRegEmail");
-    String dd = request.getParameter("dd");
-    String mm = request.getParameter("mm");
-    String yyyy = request.getParameter("yyyy");
-    String iDateBirth = yyyy + "-" + mm + "-" + dd;
-    String sRegGender = request.getParameter("sRegGender");
-    String iUserLevel = request.getParameter("iUserLevel");
-    String iUserContact = request.getParameter("iUserContact");
-    String iUserType = request.getParameter("iUserType");
-    String sUserID = request.getParameter("sUserID");
-    String sPassword = request.getParameter("sPassword");
-    String sCPassword = request.getParameter("sCPassword");
+    String sRegUsername = request.getParameter("username");
+    String sRegEmail = request.getParameter("regemail");
 
     String sqlInsertregistration = null;
 
     try {
-        sqlInsertregistration = "insert into registration (sUserID, sRegEmail, sFirstName, sLastName, iDateBirth, sRegGender,iCountryID, iCityID, iLocation, iUserType, iUserLevel, sPassword, iUserContact,dCreatedDate, sStatus)"
-                + "values(?, ?, ?, ?, ?, ?, ?, ?, ?, 3, ?, password('" + sPassword + "'), ?, sysdate(),'P')";
+        sqlInsertregistration = "insert into registration (sRegUsername, sRegEmail)" + "values(?, ?)";
         psInsert = conn.prepareStatement(sqlInsertregistration);
-        psInsert.setString(1, sUserID);
+
+        psInsert.setString(1, sRegUsername);
         psInsert.setString(2, sRegEmail);
-        psInsert.setString(3, sFirstName);
-        psInsert.setString(4, sLastName);
-        psInsert.setString(5, iDateBirth);
-        psInsert.setString(6, sRegGender);
-        psInsert.setString(7, iCountryID);
-        psInsert.setString(8, iCityID);
-        psInsert.setString(9, iLocation);
-        psInsert.setString(10, iUserLevel);
-        psInsert.setString(11, iUserContact);
 
         psInsert.executeUpdate();
     } catch (Exception e) {
@@ -68,8 +44,68 @@
         <!--css animate-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <body>
+        <nav class="nav">
+            <div class="nav-center">
+                <a class="toggle-nav" href="#">&#9776;</a>
 
+                <div class="nav-mobile">
+                    <ul class="left">
+                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> About</a></li>
+                        <li><a  href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
+                        <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
+                        <li><a data-scroll href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
+                        <li><a href="register.jsp"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Login/SignUp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h2>Registration completed Successfully!</h2>
+        </div>
+        <!--footer-->
+        <footer class="animated fadeIn">
+            <div class="container">
+                <p style="text-align: center;"><span class="si">For more information on <em>The Grand Challenges Africa E-Marketplace</em> or for general inquiries, </span><a href="mailto:GCAfrica@aasciences.ac.ke" style="font-size: 17px;"> <i class="fa fa-envelope-o" aria-hidden="true"></i>Contact now</a></p>
+                <div class="clearfix"></div>
+                <div class="footer-menu">
+                    <div class="large-12 cell">
+                        <ul>
+                            <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> ABOUT</a></li>
+                            <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> FEATURED PROJECTS</a></li>
+                            <li><a data-scroll href=""><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> NEWS &amp; EVENTS</a></li>
+                            <li><a data-scroll href=""><i class="fa fa-users fa-lg" aria-hidden="true"></i> PARTNERS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-footer">
+                    <p>FOLLOW US</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/aesaafrica/" target="_blank"><i class="fa fa-facebook fa-lg" style="font-size: 20px;"></i></a></li>
+                        <li><a href="https://twitter.com/AAS_AESA" target="_blank"><i class="fa fa-twitter fa-lg" style="font-size: 20px;"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCtdLgoNICbdUFqkw-ph508g" target="_blank"><i class="fa fa-youtube-play fa-lg" style="font-size: 20px;"></i></a></li>
+                    </ul>
+                </div>
 
+                <div class="clearfix"></div>
+
+                <div class="disclaimer-footer">
+                    <div class="large-12 cell">
+                        <p class="p1" style="text-align: center;"><span class="s1">&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script><em> Grand Challenges Africa E-marketplace</em>. All Rights Reserved. <a href="https://www.aasciences.ac.ke/aesa/privacy-policy/">Disclaimer</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/smooth-scroll.js"></script>
+        <script>
+                            smoothScroll.init();
+        </script> 
     </body>
 </html>
 <%
