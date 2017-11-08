@@ -105,11 +105,11 @@
                                 <h6>User Login Information</h6>
                                 <fieldset>
                                     <label>Password</label>
-                                    <input type="password" name="password" id="password" placeholder="PASSWORD">
+                                    <input type="password" name="sPassword" id="password" placeholder="PASSWORD">
                                 </fieldset>
                                 <fieldset>
                                     <label>Confirm password*</label>
-                                    <input type="password" name="confirmedpassword" id="password" placeholder="PASSWORD">
+                                    <input type="password" name="sCPassword" id="password" placeholder="PASSWORD">
                                 </fieldset>
                                 <div class="g-recaptcha" data-sitekey="6LcXLzEUAAAAABHVpRm1GgfuXjhXzVGAWqy7EJ4H"></div>
                                 <br>

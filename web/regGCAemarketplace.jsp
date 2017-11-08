@@ -8,11 +8,13 @@
 
     String sRegUsername = request.getParameter("username");
     String sRegEmail = request.getParameter("regemail");
+    String sPassword=request.getParameter("sPassword");
+    String sCPassword=request.getParameter("sCPassword");
 
     String sqlInsertregistration = null;
 
     try {
-        sqlInsertregistration = "insert into registration (sRegUsername, sRegEmail)" + "values(?, ?)";
+        sqlInsertregistration = "insert into registration (sRegUsername, sRegEmail, sPassword)" + "values(?, ?, password('"+sPassword+"'))";
         psInsert = conn.prepareStatement(sqlInsertregistration);
 
         psInsert.setString(1, sRegUsername);
