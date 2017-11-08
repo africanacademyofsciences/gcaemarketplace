@@ -57,12 +57,12 @@
                         <li><a  href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
-                        <li><a href="register.jsp"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Login/SignUp</a></li>
+                        <li><a href="register.jsp"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <div class="grid-container" id="app">
             <h2>Registration completed Successfully!</h2>
         </div>
         <!--footer-->
