@@ -14,7 +14,7 @@
 			String message="User login successfully ";
 			String loginYes="";
 			
-		    String sqlOption="SELECT * FROM registration u where sUserID=? and sPassword=password(?)";
+		    String sqlOption="SELECT * FROM registration u where sUserID='"+sUserID+"' and sPassword=password(?)";
       	    psOptions=conn.prepareStatement(sqlOption);
 			psOptions.setString(1,sUserID);
 			psOptions.setString(2,sPassword);
@@ -23,8 +23,7 @@
 			{
 			  loginYes="yes";
 			  session.setAttribute("sUserID",rsOptions.getString("sUserID"));
-//			  session.setAttribute("iUserType",rsOptions.getString("iUserType"));
-//			  session.setAttribute("iUserLevel",rsOptions.getString("iUserLevel"));
+			  session.setAttribute("sRegEmail",rsOptions.getString("sRegEmail"));
 			  session.setAttribute("sRegUsername",rsOptions.getString("sRegUsername"));
 			  response.sendRedirect("index.html");
 			}
