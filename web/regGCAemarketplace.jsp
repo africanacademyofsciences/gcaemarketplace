@@ -1,32 +1,37 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*" errorPage="" %>
 <jsp:useBean id="dbConn" scope="request" class="com.gca.db.DBProperties"/>
 <%
-    Connection conn = null;
-    conn = dbConn.getConnection();
-
-    PreparedStatement psInsert = null;
-
-    String sRegUsername = request.getParameter("username");
-    String sRegEmail = request.getParameter("regemail");
-    String sPassword=request.getParameter("sPassword");
-    String sCPassword=request.getParameter("sCPassword");
-
-    String sqlInsertregistration = null;
-
-    try {
-        sqlInsertregistration = "insert into registration (sRegUsername, sRegEmail, sPassword, sStatus)" + "values('"+sRegUsername+"', '"+sRegEmail+"', password('"+sPassword+"'), 'A')";
-        psInsert = conn.prepareStatement(sqlInsertregistration);
-
-        psInsert.setString(1, sRegUsername);
-        psInsert.setString(2, sRegEmail);
-
-        psInsert.executeUpdate();
-    } catch (Exception e) {
-        e.printStackTrace();
-        request.setAttribute("error", "<span class='sSError'>&nbsp; Registration is not successful, May be User ID already Exists &nbsp; </span>");
-        RequestDispatcher dispatch = request.getRequestDispatcher("/register.jsp");
-        dispatch.forward(request, response);
-    }
+//    Connection conn = null;
+//    conn = dbConn.getConnection();
+//
+//    PreparedStatement psInsert = null;
+//
+//    String sRegUsername = request.getParameter("names");
+//    String sRegEmail = request.getParameter("regemail");
+//    String registeras = request.getParameter("type");
+//    String sPassword=request.getParameter("sPassword");
+////    String sCPassword=request.getParameter("sCPassword");
+//
+//    String sqlInsertregistration = null;
+//
+//    try {
+//        sqlInsertregistration = "insert into registration (sName, sRegEmail, type, sPassword)" + "values('?, ?, ?, ?)";
+//        psInsert = conn.prepareStatement(sqlInsertregistration);
+//
+//        
+//        psInsert.setString(2,sRegUsername);
+//        psInsert.setString(3,sRegEmail);
+//        psInsert.setString(4,registeras);
+//
+//
+//        psInsert.executeUpdate();
+//        
+//    } catch (Exception e) {
+//        e.printStackTrace();
+//        request.setAttribute("error", "<span class='sSError'>&nbsp; Registration is not successful, May be User ID already Exists &nbsp; </span>");
+//        RequestDispatcher dispatch = request.getRequestDispatcher("/register.jsp");
+//        dispatch.forward(request, response);
+//    }
 %>
 
 <!doctype html>
@@ -111,15 +116,15 @@
     </body>
 </html>
 <%
-    try {
-        if (psInsert != null) {
-            psInsert.close();
-        }
-
-        if (conn != null) {
-            conn.close();
-        }
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
+//    try {
+//        if (psInsert != null) {
+//            psInsert.close();
+//        }
+//
+//        if (conn != null) {
+//            conn.close();
+//        }
+//    } catch (Exception e) {
+//        e.printStackTrace();
+//    }
 %>

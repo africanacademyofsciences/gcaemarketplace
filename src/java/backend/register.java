@@ -11,6 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -18,30 +25,52 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class register extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet register</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet register at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        PrintWriter out = response.getWriter();
+
+        //get form data
+        String sRegUsername = request.getParameter("names");
+        String sRegEmail = request.getParameter("regemail");
+        String registeras = request.getParameter("type");
+        String sPassword = request.getParameter("sPassword");
+        
+
+        if ("".equals(sRegUsername) || "".equals(sRegEmail) || "".equals(registeras) || "".equals(sPassword)) {
+            //redirect to error page
+            response.sendRedirect("https://google.com");
         }
+        else {
+            
+            try {
+                //attempt to save data
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gcaemarketplace", "root", "303seminarian");
+                String sql = "INSERT into registration VALUES('" + sRegUsername + "','" +sRegEmail + "','" +registeras + "','" + sPassword + "')";
+                Statement st = conn.createStatement();
+                //change type of Resultset
+                boolean rs;
+                rs = st.execute(sql);
+
+                request.setAttribute("names", sRegUsername);
+                request.setAttribute("regemail", sRegEmail);
+                request.setAttribute("type", registeras);
+//                request.setAttribute(sql, rs);
+
+                //forward data to next jsp page
+                RequestDispatcher rd = request.getRequestDispatcher("regGCAemarketplace.jsp");
+                rd.forward(request, response);
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InstantiationException ex) {
+                Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IllegalAccessException ex) {
+                Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -56,7 +85,11 @@ public class register extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -70,7 +103,11 @@ public class register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

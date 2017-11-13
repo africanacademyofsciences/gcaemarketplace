@@ -93,10 +93,10 @@
                         <br>
                         <div class="tml tml-register" id="theme-my-login">
                             <p class="message">Register For This Site or <a href="login.html">Log in</a></p>
-                            <form action="regGCAemarketplace.jsp" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
+                            <form action="register" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
                                 <fieldset>
                                     <label>NAME</label>
-                                    <input type="text" name="username" id="username" placeholder="USERNAME">
+                                    <input type="text" name="names" id="username" placeholder="NAMES">
                                 </fieldset>
                                 <fieldset>
                                     <label>EMAIL ADDRESS</label>
@@ -104,8 +104,8 @@
                                 </fieldset>
                                 <fieldset>
                                     <label>Register as</label>
-                                    <select>
-                                        <option value="" disabled>Select One</option>
+                                    <select name="type">
+                                        <option disabled>Select One</option>
                                         <option value="funder">funder</option>
                                     </select>
                                 </fieldset>
@@ -114,10 +114,10 @@
                                     <label>Password</label>
                                     <input type="password" name="sPassword" id="password" placeholder="PASSWORD">
                                 </fieldset>
-                                <fieldset>
+<!--                                <fieldset>
                                     <label>Confirm password*</label>
                                     <input type="password" name="sCPassword" id="password" placeholder="PASSWORD">
-                                </fieldset>
+                                </fieldset>-->
                                 <br>
                                 <!--<p class="tml-registration-confirmation" id="reg_passmail">Registration confirmation will be e-mailed to you.</p>-->
                                 <p class="tml-submit-wrap"><button type="submit" class="button large expanded secondary">REGISTER</button></p>
