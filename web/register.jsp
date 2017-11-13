@@ -95,12 +95,19 @@
                             <p class="message">Register For This Site or <a href="login.html">Log in</a></p>
                             <form action="regGCAemarketplace.jsp" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
                                 <fieldset>
-                                    <label>USERNAME</label>
+                                    <label>NAME</label>
                                     <input type="text" name="username" id="username" placeholder="USERNAME">
                                 </fieldset>
                                 <fieldset>
-                                    <label>EMAIL</label>
+                                    <label>EMAIL ADDRESS</label>
                                     <input type="email" name="regemail" id="email" placeholder="EMAIL">
+                                </fieldset>
+                                <fieldset>
+                                    <label>Register as</label>
+                                    <select>
+                                        <option value="" disabled>Select One</option>
+                                        <option value="funder">funder</option>
+                                    </select>
                                 </fieldset>
                                 <h6>User Login Information</h6>
                                 <fieldset>
@@ -111,7 +118,6 @@
                                     <label>Confirm password*</label>
                                     <input type="password" name="sCPassword" id="password" placeholder="PASSWORD">
                                 </fieldset>
-                                <div class="g-recaptcha" data-sitekey="6LcXLzEUAAAAABHVpRm1GgfuXjhXzVGAWqy7EJ4H"></div>
                                 <br>
                                 <!--<p class="tml-registration-confirmation" id="reg_passmail">Registration confirmation will be e-mailed to you.</p>-->
                                 <p class="tml-submit-wrap"><button type="submit" class="button large expanded secondary">REGISTER</button></p>

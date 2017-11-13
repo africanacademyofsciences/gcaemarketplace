@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*" errorPage="" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*" errorPage="" %>
 <jsp:useBean id="dbConn" scope="request" class="com.gca.db.DBProperties"/>
 <%
     Connection conn = null;
@@ -14,7 +14,7 @@
     String sqlInsertregistration = null;
 
     try {
-        sqlInsertregistration = "insert into registration (sRegUsername, sRegEmail, sPassword)" + "values(?, ?, password('"+sPassword+"'))";
+        sqlInsertregistration = "insert into registration (sRegUsername, sRegEmail, sPassword, sStatus)" + "values('"+sRegUsername+"', '"+sRegEmail+"', password('"+sPassword+"'), 'A')";
         psInsert = conn.prepareStatement(sqlInsertregistration);
 
         psInsert.setString(1, sRegUsername);

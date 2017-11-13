@@ -31,20 +31,19 @@
 
             function validateForm()
             {
-                var str=/^[A-Za-z][.A-Za-z ]{0,100}$/;
+                var str = /^[A-Za-z][.A-Za-z ]{0,100}$/;
 
-		if((trim(document.frmLogin.username.value)=="") || str.test(trim(document.frmLogin.username.value))==false)
-		{
-			alert("Please fill your username and it should be characters only");
-			document.frmLogin.username.focus();
-			return false;
-		}
-                else if((trim(document.frmLogin.email.value)=="") || validateEmail(document.frmLogin.email)==false)
-		{
-			alert("Please fill email value and should be email format");
-			document.frmLogin.email.focus();
-			return false;
-		}
+                if ((trim(document.frmLogin.username.value) == "") || str.test(trim(document.frmLogin.username.value)) == false)
+                {
+                    alert("Please fill your username and it should be characters only");
+                    document.frmLogin.username.focus();
+                    return false;
+                } else if ((trim(document.frmLogin.email.value) == "") || validateEmail(document.frmLogin.email) == false)
+                {
+                    alert("Please fill email value and should be email format");
+                    document.frmLogin.email.focus();
+                    return false;
+                }
             }
 
             function init()
@@ -85,7 +84,7 @@
                     <div class="container">
                         <br>
                         <div class="tml tml-register" id="theme-my-login">
-                            <p class="message">Log in to this site or <a href="register.html">Register</a></p>
+                            <p class="message">Log in to this site or <a href="register.jsp">Register</a></p>
                             <form action="doLogin.jsp" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
                                 <fieldset>
                                     <label>USERNAME or EMAIL</label>
@@ -94,6 +93,14 @@
                                 <fieldset>
                                     <label>PASSWORD</label>
                                     <input type="password" name="password" id="email" placeholder="PASSWORD">
+                                </fieldset>
+                                <fieldset>
+                                    <label>Register as</label>
+                                    <select>
+                                        <option value="" disabled>Select One</option>
+                                        <option value="funder">funder</option>
+                                        <option value="admin">admin</option>
+                                    </select>
                                 </fieldset>
                                 <p class="tml-submit-wrap"><button type="submit" class="button econdary">LOG IN</button></p>
                             </form>
