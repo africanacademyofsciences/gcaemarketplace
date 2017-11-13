@@ -72,6 +72,18 @@
                     <ul class="right">
                         <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
+                         <%
+                                String status = "Login";
+                                String fileCall = "login.html";
+                                String x = session.getAttribute("username").toString();
+                                
+                                if (!x.equals("")) {
+                                    status = "Logout";
+                                    fileCall = "logout.jsp";
+//                                    out.println("You are logged in as " + x);
+                                }
+                            %>
+                        <li><a href="<%=fileCall%>"><span><%=session%> <%=status%></span></a></li>
                     </ul>
                 </div>
             </div>

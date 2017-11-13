@@ -27,13 +27,14 @@
                         <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     </ul>
                     <ul class="right">
-                        <li style="font-size: 18.5px;"><i class="fa fa-sign-out fa-lg"></i>
+                        <li style="font-size: 18.5px;"><a href="">
                             <%
+                                
                                 String x = session.getAttribute("username").toString();
                                 out.println("You are logged in as " + x);
                             %>
-                        </li>
-                        <!--<li><a href="logout.jsp.jsp"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Logout</a></li>-->
+                        </a></li>
+                        <li><a href="logout.jsp.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
