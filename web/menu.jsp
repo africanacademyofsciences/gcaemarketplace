@@ -1,10 +1,5 @@
-<%-- 
-    Document   : menu
-    Created on : Nov 13, 2017, 11:52:45 AM
-    Author     : kimaiga
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" errorPage=""%>
+<%@include file="function.jsp"%>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
     <head>
@@ -32,11 +27,13 @@
                         <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     </ul>
                     <ul class="right">
-                        <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> About</a></li>
-                        <li><a  href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
-                        <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
-                        <li><a data-scroll href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
-                        <li><a href="register.jsp"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Login/SignUp</a></li>
+                        <li style="font-size: 18.5px;"><i class="fa fa-sign-out fa-lg"></i>
+                            <%
+                                String x = session.getAttribute("username").toString();
+                                out.println("You are logged in as " + x);
+                            %>
+                        </li>
+                        <!--<li><a href="logout.jsp.jsp"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Logout</a></li>-->
                     </ul>
                 </div>
             </div>
