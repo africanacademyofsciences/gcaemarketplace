@@ -35,9 +35,9 @@
 
                 if ((trim(document.frmLogin.username.value) == "") || str.test(trim(document.frmLogin.username.value)) == false)
                 {
-                    alert("Please fill your username and it should be characters only");
-                    document.frmLogin.username.focus();
-                    return false;
+//                    alert("Please fill your username and it should be characters only");
+//                    document.frmLogin.username.focus();
+//                    return false;
                 } else if ((trim(document.frmLogin.email.value) == "") || validateEmail(document.frmLogin.email) == false)
                 {
                     alert("Please fill email value and should be email format");
@@ -88,7 +88,7 @@
                             <form action="doLogin.jsp" method="POST" autocomplete="off" name="frmLogin" onsubmit="return validateForm()">
                                 <fieldset>
                                     <label>USERNAME or EMAIL</label>
-                                    <input type="text" name="username" id="username" placeholder="USERNAME">
+                                    <input type="email" name="username" id="username" placeholder="EMAIL">
                                 </fieldset>
                                 <fieldset>
                                     <label>PASSWORD</label>
