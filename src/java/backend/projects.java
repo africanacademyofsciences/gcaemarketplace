@@ -18,6 +18,8 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
+import java.io.File;
+import java.io.FileInputStream;
 
 /**
  *
@@ -89,7 +91,7 @@ public class projects extends HttpServlet {
             processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
-        }
+}
     }
 
     /**

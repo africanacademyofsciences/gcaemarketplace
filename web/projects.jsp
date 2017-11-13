@@ -4,7 +4,43 @@
     Author     : kimaiga
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.io.InputStream"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
+<jsp:useBean id="dbConn" scope="request" class="com.gca.db.DBProperties"/>
+<%
+    Connection conn = null;
+    conn = dbConn.getConnection();
+
+//make quueries
+    PreparedStatement psPhoto = null;
+    ResultSet rsPhoto = null;
+
+    PreparedStatement psTitle = null;
+    ResultSet rsTitle = null;
+
+    PreparedStatement psSummary = null;
+    ResultSet rsSummary = null;
+
+    try {
+        String sqlPhoto = "SELECT photo FROM projects where isDeleted=0";
+        psPhoto = conn.prepareStatement(sqlPhoto);
+        rsPhoto = psPhoto.executeQuery();
+        
+
+        String sqlTitle = "SELECT name FROM projects where isDeleted=0";
+        psTitle = conn.prepareStatement(sqlTitle);
+        rsTitle = psTitle.executeQuery();
+
+        String sqlSummary = "SELECT summary FROM projects where isDeleted=0";
+        psSummary = conn.prepareStatement(sqlSummary);
+        rsSummary = psSummary.executeQuery();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+
+%>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
     <head>
@@ -36,24 +72,43 @@
                         <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
-                        <li><a href="register.html"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Login/SignUp</a></li>
+                        <li style="font-size: 18.5px;"><a href="">
+                                <%                                    String x = session.getAttribute("username").toString();
+                                    out.println("Hi " + x);
+                                %>
+                            </a></li>
+                        <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div id="app" class="container">
-            <h1 style="color: #003A70; font-weight: 500; text-align: center;">FEATURED PROJECTS <i class="fa fa-clipboard" aria-hidden="true"></i></h1>
+            <h1 style="color: #003A70; font-weight: 500; text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> New Project has been successfully added</h1>
             <br>
             <!--row 1-->
             <div class="container grid-x">
                 <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                    <%
+                        while (rsPhoto.next()) {            
+                    %>
+                    <img src="<%=rsPhoto.getBinaryStream("photo")%>" style="border-radius: 10px;">
+                    <%
+                        }
+                    %>
+                    <%
+                        while (rsTitle.next()) {
+                    %>
+                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;"><%=rsTitle.getString("name")%></h3>
+                    <%
+                        }
+                    %>
                     <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
+                        <%
+                            while (rsSummary.next()) {
+                        %>
+                        <p style="text-align: justify;"><%=rsSummary.getString("summary")%></p>
+                        <%}
+                        %>
                     </div>
                 </div>
                 <div class="large-4 small-12 cell">

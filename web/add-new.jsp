@@ -88,7 +88,7 @@
             <h4>Add New Project</h4>
             <div class="grid-x">
                 <div class="large-8 cell">
-                    <form action="projects">
+                    <form action="projects" method="post">
                         <fieldset>
                             <label>Project Title</label>
                             <input type="text" name="title" placeholder="Project Title">
