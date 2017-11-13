@@ -70,20 +70,16 @@
                         <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     </ul>
                     <ul class="right">
-                        <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
+                        <li><a href="projects"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
-                         <%
-                                String status = "Login";
-                                String fileCall = "login.html";
-                                String x = session.getAttribute("username").toString();
+                        <li style="font-size: 18.5px;"><a href="">
+                            <%
                                 
-                                if (!x.equals("")) {
-                                    status = "Logout";
-                                    fileCall = "logout.jsp";
-//                                    out.println("You are logged in as " + x);
-                                }
+                                String x = session.getAttribute("username").toString();
+                                out.println("Hi " + x);
                             %>
-                        <li><a href="<%=fileCall%>"><span><%=session%> <%=status%></span></a></li>
+                        </a></li>
+                        <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -92,18 +88,18 @@
             <h4>Add New Project</h4>
             <div class="grid-x">
                 <div class="large-8 cell">
-                    <form>
+                    <form action="projects">
                         <fieldset>
                             <label>Project Title</label>
                             <input type="text" name="title" placeholder="Project Title">
                         </fieldset>
                         <fieldset>
-                            <label>Project Summary</label>
-                            <textarea rows="8" name="summary" placeholder="Project Summary"></textarea>
+                            <label>Project Summary (in 280 characters)</label>
+                            <textarea rows="4" name="summary" placeholder="Project Summary"></textarea>
                         </fieldset>
                         <fieldset>
                             <label>Upload Image</label>
-                            <input type="file">
+                            <input type="file" name="photo">
                         </fieldset>
                         <button type="submit" class="button success">Submit</button>
                     </form>

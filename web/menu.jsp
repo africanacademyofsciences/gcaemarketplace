@@ -31,16 +31,16 @@
                             <%
                                 
                                 String x = session.getAttribute("username").toString();
-                                out.println("You are logged in as " + x);
+                                out.println("Hi " + x);
                             %>
                         </a></li>
-                        <li><a href="logout.jsp.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
+                        <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div id="app" class="grid-container fluid">
-
+            <a href="add-new.jsp">Add new project entry</a>
         </div>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/vendor/what-input.js"></script>
