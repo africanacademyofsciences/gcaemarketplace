@@ -4,16 +4,14 @@
     Author     : kimaiga
 --%>
 
+<%@page import="java.io.OutputStream"%>
 <%@page import="java.io.InputStream"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
+<%--<%@include file="retrieve_image.jsp"%>--%>
 <jsp:useBean id="dbConn" scope="request" class="com.gca.db.DBProperties"/>
 <%
     Connection conn = null;
     conn = dbConn.getConnection();
-
-//make quueries
-    PreparedStatement psPhoto = null;
-    ResultSet rsPhoto = null;
 
     PreparedStatement psTitle = null;
     ResultSet rsTitle = null;
@@ -22,10 +20,10 @@
     ResultSet rsSummary = null;
 
     try {
-        String sqlPhoto = "SELECT photo FROM projects where isDeleted=0";
-        psPhoto = conn.prepareStatement(sqlPhoto);
-        rsPhoto = psPhoto.executeQuery();
-        
+//        String sqlPhoto = "SELECT photo FROM projects where isDeleted=0";
+//        psPhoto = conn.prepareStatement(sqlPhoto);
+//        rsPhoto = psPhoto.executeQuery();
+//        Blob rsBlob
 
         String sqlTitle = "SELECT name FROM projects where isDeleted=0";
         psTitle = conn.prepareStatement(sqlTitle);
@@ -88,13 +86,8 @@
             <!--row 1-->
             <div class="container grid-x">
                 <div class="large-4 small-12 cell">
-                    <%
-                        while (rsPhoto.next()) {            
-                    %>
-                    <img src="<%=rsPhoto.getBinaryStream("photo")%>" style="border-radius: 10px;">
-                    <%
-                        }
-                    %>
+                    <img src="" style="border-radius: 10px;">
+
                     <%
                         while (rsTitle.next()) {
                     %>

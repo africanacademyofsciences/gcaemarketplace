@@ -70,7 +70,7 @@
                         <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     </ul>
                     <ul class="right">
-                        <li><a href="projects"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
+                        <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
                         <li style="font-size: 18.5px;"><a href="">
                             <%
@@ -88,7 +88,7 @@
             <h4>Add New Project</h4>
             <div class="grid-x">
                 <div class="large-8 cell">
-                    <form action="projects" method="post">
+                    <form action="projects" method="post" enctype="multipart/form-data">
                         <fieldset>
                             <label>Project Title</label>
                             <input type="text" name="title" placeholder="Project Title">

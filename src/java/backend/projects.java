@@ -6,120 +6,90 @@
 package backend;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+ 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
-import java.io.File;
-import java.io.FileInputStream;
-
-/**
- *
- * @author kimaiga
- */
+import javax.servlet.http.Part;
+ 
+@WebServlet("/uploadServlet")
+@MultipartConfig(maxFileSize = 16177215)    // upload file's size up to 16MB
 public class projects extends HttpServlet {
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
-        //get form data
-        String title = request.getParameter("title");
-        String summary = request.getParameter("summary");
-        String photo = request.getParameter("photo");
-
-        
-
-        if ("".equals(title) || "".equals(summary) || "".equals(photo)) {
-            //redirect to error page
-            response.sendRedirect("https://google.com");
+     
+    // database connection settings
+    private String dbURL = "jdbc:mysql://localhost:3306/gcaemarketplace";
+    private String dbUser = "root";
+    private String dbPass = "303seminarian";
+     
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        // gets values of text fields
+        String projectTitle = request.getParameter("title");
+        String projectSummary = request.getParameter("summary");
+         
+        InputStream inputStream = null; // input stream of the upload file
+         
+        // obtains the upload file part in this multipart request
+        Part filePart = request.getPart("photo");
+        if (filePart != null) {
+            // prints out some information for debugging
+            System.out.println(filePart.getName());
+            System.out.println(filePart.getSize());
+            System.out.println(filePart.getContentType());
+             
+            // obtains input stream of the upload file
+            inputStream = filePart.getInputStream();
         }
-        else {
-            
-            try {
-                //attempt to save data
-                Class.forName("com.mysql.jdbc.Driver").newInstance();
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gcaemarketplace", "root", "303seminarian");
-                String sql = "INSERT into projects VALUES('" + title + "','" +summary + "','" +photo + "', 0)";
-                Statement st = conn.createStatement();
-                //change type of Resultset
-                boolean rs;
-                rs = st.execute(sql);
-
-                request.setAttribute("title", title);
-                request.setAttribute("summary", summary);
-                request.setAttribute("photo", photo);
-//                request.setAttribute(sql, rs);
-
-                //forward data to next jsp page
-                RequestDispatcher rd = request.getRequestDispatcher("projects.jsp");
-                rd.forward(request, response);
-
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(projects.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (InstantiationException ex) {
-                Logger.getLogger(projects.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IllegalAccessException ex) {
-                Logger.getLogger(projects.class.getName()).log(Level.SEVERE, null, ex);
+         
+        Connection conn = null; // connection to the database
+        String message = null;  // message will be sent back to client
+         
+        try {
+            // connects to the database
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            conn = DriverManager.getConnection(dbURL, dbUser, dbPass);
+ 
+            // constructs SQL statement
+            String sql = "INSERT INTO projects (name, summary, photo, isDeleted) values (?, ?, ?, 0)";
+            PreparedStatement statement = conn.prepareStatement(sql);
+            statement.setString(1, projectTitle);
+            statement.setString(2, projectSummary);
+             
+            if (inputStream != null) {
+                // fetches input stream of the upload file for the blob column
+                statement.setBlob(3, inputStream);
             }
-        }
-
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            processRequest(request, response);
+ 
+            // sends the statement to the database server
+            int row = statement.executeUpdate();
+            if (row > 0) {
+                message = "File uploaded and saved into database";
+            }
         } catch (SQLException ex) {
-            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
-}
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+            message = "ERROR: " + ex.getMessage();
+            ex.printStackTrace();
+        } finally {
+            if (conn != null) {
+                // closes the database connection
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            // sets the message in request scope
+            request.setAttribute("Message", message);
+             
+            // forwards to the message page
+            getServletContext().getRequestDispatcher("/Message.jsp").forward(request, response);
         }
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
