@@ -66,19 +66,18 @@
 
                 <div class="nav-mobile">
                     <ul class="left">
-                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                        <a href=""><img src="img/logo.png" width="155" height="55"></a>
                     </ul>
                     <ul class="right">
-                        <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> About</a></li>
+                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
-                        <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
+                        <!--<li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>-->
                         <li><a data-scroll href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
                         <li style="font-size: 18.5px;"><a href="">
-                                <%                                    String x = session.getAttribute("username").toString();
-                                    out.println("Hi " + x);
-                                %>
+                                <% //                                    String x = session.getAttribute("username").toString();
+//                                    out.println("Hi " + x);
+%>
                             </a></li>
-                        <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,16 +89,6 @@
             <div class="container grid-x">
                 <div class="large-4 small-12 cell">
 
-                    <img src="" style="border-radius: 10px;">
-
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;"><%=rsTitle.getString("name")%></h3>
-
-                    <div class="projectdescription">
-
-                        <p style="text-align: justify;"><%=rsSummary.getString("summary")%></p>
-                    </div>
-                </div>
-                <div class="large-4 small-12 cell">
                     <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
                     <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
                     <div class="projectdescription">
@@ -109,126 +98,136 @@
                         </p>
                     </div>
                 </div>
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
                 </div>
             </div>
-            <hr>
-            <!--row 2-->
-            <div class="container grid-x">
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
-                </div>
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
-                </div>
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <!--row 3-->
-            <div class="container grid-x">
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
-                </div>
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
-                </div>
-                <div class="large-4 small-12 cell">
-                    <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
-                    <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
-                    <div class="projectdescription">
-                        <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis 
-                            parturient montes, nascetur ridiculus mus. Donec quam felis u
-                        </p>
-                    </div>
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
                 </div>
             </div>
         </div>
-        <!--footer-->
-        <footer class="animated fadeIn">
-            <div class="container">
-                <p style="text-align: center;"><span class="si">For more information on <em>The Grand Challenges Africa E-Marketplace</em> or for general inquiries, </span><a href="mailto:GCAfrica@aasciences.ac.ke" style="font-size: 17px;"> <i class="fa fa-envelope-o" aria-hidden="true"></i>Contact now</a></p>
-                <div class="clearfix"></div>
-                <div class="footer-menu">
-                    <div class="large-12 cell">
-                        <ul>
-                            <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> ABOUT</a></li>
-                            <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> FEATURED PROJECTS</a></li>
-                            <li><a data-scroll href=""><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> NEWS &amp; EVENTS</a></li>
-                            <li><a data-scroll href=""><i class="fa fa-users fa-lg" aria-hidden="true"></i> PARTNERS</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="social-footer">
-                    <p>FOLLOW US</p>
-                    <ul>
-                        <li><a href="https://www.facebook.com/aesaafrica/" target="_blank"><i class="fa fa-facebook fa-lg" style="font-size: 20px;"></i></a></li>
-                        <li><a href="https://twitter.com/AAS_AESA" target="_blank"><i class="fa fa-twitter fa-lg" style="font-size: 20px;"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCtdLgoNICbdUFqkw-ph508g" target="_blank"><i class="fa fa-youtube-play fa-lg" style="font-size: 20px;"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="disclaimer-footer">
-                    <div class="large-12 columns">
-                        <p class="p1" style="text-align: center;"><span class="s1">&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script><em> Grand Challenges Africa E-marketplace</em>. All Rights Reserved. <a href="https://www.aasciences.ac.ke/aesa/privacy-policy/">Disclaimer</a></span></p>
-                    </div>
+        <hr>
+        <!--row 2-->
+        <div class="container grid-x">
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
                 </div>
             </div>
-        </footer>
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/vendor/what-input.js"></script>
-        <script src="js/vendor/foundation.min.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/smooth-scroll.js"></script>
-        <script>
-                            smoothScroll.init();
-        </script>
-    </body>
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--row 3-->
+        <div class="container grid-x">
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+            <div class="large-4 small-12 cell">
+                <img src="http://via.placeholder.com/350x350" style="border-radius: 10px;">
+                <h3 class="projecttitle" style="text-align: justify; font-weight: 800;">Title of Project</h3>
+                <div class="projectdescription">
+                    <p style="text-align: justify;">(Project Summary)Lorem ipsum dolor sit amet, consectetuer 
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis 
+                        parturient montes, nascetur ridiculus mus. Donec quam felis u
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="animated fadeIn">
+        <div class="container">
+            <p style="text-align: center;"><span class="si">For more information on <em>The Grand Challenges Africa E-Marketplace</em> or for general inquiries, </span><a href="mailto:GCAfrica@aasciences.ac.ke" style="font-size: 17px;"> <i class="fa fa-envelope-o" aria-hidden="true"></i>Contact now</a></p>
+            <div class="clearfix"></div>
+            <div class="footer-menu">
+                <div class="large-12 cell">
+                    <ul>
+<!--                        <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> ABOUT</a></li>-->
+                        <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> FEATURED PROJECTS</a></li>
+                        <!--<li><a data-scroll href=""><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> NEWS &amp; EVENTS</a></li>-->
+                        <li><a href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> PARTNERS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-footer">
+                <p>FOLLOW US</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/aesaafrica/" target="_blank"><i class="fa fa-facebook fa-lg" style="font-size: 20px;"></i></a></li>
+                    <li><a href="https://twitter.com/AAS_AESA" target="_blank"><i class="fa fa-twitter fa-lg" style="font-size: 20px;"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCtdLgoNICbdUFqkw-ph508g" target="_blank"><i class="fa fa-youtube-play fa-lg" style="font-size: 20px;"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="disclaimer-footer">
+                <div class="large-12 columns">
+                    <p class="p1" style="text-align: center;"><span class="s1">&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script><em> Grand Challenges Africa E-marketplace</em>. All Rights Reserved. <a href="https://www.aasciences.ac.ke/aesa/privacy-policy/">Disclaimer</a></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script>
+                        smoothScroll.init();
+    </script>
+</body>
 </html>

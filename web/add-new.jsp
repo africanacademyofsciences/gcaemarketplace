@@ -76,14 +76,15 @@
                         <a href=""><img src="img/logo.png" width="155" height="55"></a>
                     </ul>
                     <ul class="right">
+                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
-                        <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
+                        <li><a href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Partners</a></li>
                         <li style="font-size: 18.5px;"><a href="">
                                 <%
 
                                     //                                String x = session.getAttribute("username").toString();
                                     //                                out.println("Hi " + x);
-%>
+                                %>
                             </a></li>
                     </ul>
                 </div>
@@ -197,7 +198,7 @@
                             <label>PROVIDE A 200-WORD DESCRIPTION OF YOUR PLEDGE* </label>
                             <textarea rows="4" name="summary"></textarea>
                         </fieldset>
-                        <button type="submit" class="button success">Submit</button>
+                        <button type="submit" class="button success expanded" style="background-color: #F26522; color: #FFFFFF;">Submit</button>
                     </form>
                 </div>
             </div>
@@ -206,15 +207,15 @@
         <!--footer-->
         <footer class="animated fadeIn">
             <div class="container">
-                <p style="text-align: center;"><span class="si">For more information on <em>The Grand Challenges Africa E-Marketplace</em> or for general inquiries, </span><a href="mailto:GCAfrica@aasciences.ac.ke" style="font-size: 17px;"> <i class="fa fa-envelope-o" aria-hidden="true"></i>Contact now</a></p>
+                <p style="text-align: center;"><span class="si">For more information on the<em> Grand Challenges Africa E-Marketplace</em> or for general inquiries, </span><a href="mailto:GCAfrica@aasciences.ac.ke" style="font-size: 17px;"> <i class="fa fa-envelope-o" aria-hidden="true"></i>Contact now</a></p>
                 <div class="clearfix"></div>
                 <div class="footer-menu">
                     <div class="large-12 cell">
                         <ul>
                             <li><a data-scroll href="#about"><i class="fa fa-info fa-lg" aria-hidden="true"></i> ABOUT</a></li>
                             <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> FEATURED PROJECTS</a></li>
-                            <li><a data-scroll href=""><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> NEWS &amp; EVENTS</a></li>
-                            <li><a data-scroll href=""><i class="fa fa-users fa-lg" aria-hidden="true"></i> PARTNERS</a></li>
+                            <!--<li><a href="register.jsp"><i class="fa fa fa-key fa-lg" aria-hidden="true"></i> SIGN UP</a></li>-->
+                            <li><a href=""><i class="fa fa-users fa-lg" aria-hidden="true"></i> PARTNERS</a></li>
                         </ul>
                     </div>
                 </div>

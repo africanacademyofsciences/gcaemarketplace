@@ -24,9 +24,10 @@
 
                 <div class="nav-mobile">
                     <ul class="left">
-                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                        <a href=""><img src="img/logo.png" width="155" height="55"></a>
                     </ul>
                     <ul class="right">
+                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li style="font-size: 18.5px;"><a href="">
                             <%
                                 
@@ -40,7 +41,7 @@
             </div>
         </nav>
         <div id="app" class="grid-container fluid">
-            <a href="add-new.jsp">Add new project entry</a>
+            <a href="make-pledge.jsp">Add new project entry</a>
         </div>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/vendor/what-input.js"></script>
