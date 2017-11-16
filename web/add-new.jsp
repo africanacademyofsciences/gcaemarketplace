@@ -79,7 +79,6 @@
     //                                out.println("Hi " + x);
 %>
                             </a></li>
-                        <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -106,10 +105,10 @@
                             My Pledges <i class="fa fa-book"></i>
                         </a>
 
-                        <a href="http://www.everywomaneverychild.org/your-profile/" class="btn-sort">
+                        <a href="#" class="btn-sort">
                             My Profile <i class="fa fa-user"></i>
                         </a>
-                        <a href="http://www.everywomaneverychild.org/logout/?_wpnonce=5e83d471ae" class="btn-sort">
+                        <a href="logout.jsp" class="btn-sort">
                             Log Out <i class="fa fa-sign-out"></i>
                         </a>
 
@@ -119,13 +118,28 @@
             </div>
         </section>
         <div id="app" class="grid-container fluid">
-            <h6>Fields marked with an * are required for submission.</h6>
             <div class="grid-x">
-                <div class="large-8 cell">
-                    <form action="projects" method="post" enctype="multipart/form-data">
+                <div class="large-10 cell frm_forms  with_frm_style frm_style_formidable-style-3">
+                    <h6>Fields marked with an * are required for submission.</h6>
+                    <form action="projects" method="post" enctype="multipart/form-data" class="frm-show-form  frm_pro_form">
+                        <h3 class="frm_pos_top frm_section_spacing">About the pledge maker</h3>
                         <fieldset>
-                            <label>Project Title</label>
+                            <label>ORGANISATION NAME *</label>
                             <input type="text" name="title" placeholder="Project Title">
+                        </fieldset>
+                        <fieldset>
+                            <label>TYPE OF INSTITUTE *</label>
+                            <select name="institute">
+                                <option value="Non-profit">Non-Profit </option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label>LOCATION *</label>
+                            <input type="text" name="location" placeholder="LOCATION">
+                        </fieldset>
+                        <fieldset>
+                            <label>EMAIL *</label>
+                            <input type="email" name="email" placeholder="EMAIL">
                         </fieldset>
                         <fieldset>
                             <label>Project Summary (in 280 characters)</label>
