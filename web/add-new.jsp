@@ -25,38 +25,44 @@
         <!--Recaptch API-->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script>
-            function trim(s)
-            {
-                return s.replace(/^\s*/, "").replace(/\s*$/, "");
-            }
+            function validateForm() {
+                var x = document.forms["pledgeForm"]["title"].value;
+                var y = document.forms["pledgeForm"]["institute"].value;
+                var z = document.forms["pledgeForm"]["location"].value;
+                var m = document.forms["pledgeForm"]["email"].value;
+                var n = document.forms["pledgeForm"]["number"].value;
+                var o = document.forms["pledgeForm"]["summary"].value;
 
-//            function validateEmail(emailValue)
-//            {
-//                var objRegExp = /(^[a-z]([a-z_\.]*)@([a-z_\.]*)([.][a-z]{3})$)|(^[a-z]([a-z_\.]*)@([a-z_\.]*)(\.[a-z]{3})(\.[a-z]{2})*$)/i;
-//
-//                return objRegExp.test(emailValue);
-//            }
-
-            function validateForm()
-            {
-                var str = /^[A-Za-z][.A-Za-z ]{0,100}$/;
-
-                if ((trim(document.frmLogin.username.value) == "") || str.test(trim(document.frmLogin.username.value)) == false)
-                {
-                    alert("Please fill your username and it should be characters only");
-                    document.frmLogin.username.focus();
-                    return false;
-                } else if ((trim(document.frmLogin.email.value) == "") || validateEmail(document.frmLogin.email) == false)
-                {
-                    alert("Please fill email value and should be email format");
-                    document.frmLogin.email.focus();
+                if (x == null || x == "") {
+                    alert("Organisation name must be filled out");
                     return false;
                 }
-            }
 
-            function init()
-            {
-                document.frmLogin.login.focus();
+                if (n == null || n == "" || (n.value < 10) || (isNaN(n.value))) {
+                    alert("Number must be filled out");
+                    return false;
+                }
+
+                if (y == null || y == "") {
+                    alert("Institute must be filled out");
+                    return false;
+                }
+
+                if (z == null || z == "") {
+                    alert("Location must be filled out");
+                    return false;
+                }
+
+                if (m == null || m == "") {
+                    alert("email must be filled out");
+                    return false;
+                }
+
+                if (o == null || o == "") {
+                    alert("Summary must be filled out");
+                    return false;
+                }
+                return true;
             }
         </script>
     </head>
@@ -67,7 +73,7 @@
 
                 <div class="nav-mobile">
                     <ul class="left">
-                        <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                        <a href=""><img src="img/logo.png" width="155" height="55"></a>
                     </ul>
                     <ul class="right">
                         <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
@@ -75,9 +81,9 @@
                         <li style="font-size: 18.5px;"><a href="">
                                 <%
 
-    //                                String x = session.getAttribute("username").toString();
-    //                                out.println("Hi " + x);
-%>
+                                    //                                String x = session.getAttribute("username").toString();
+                                    //                                out.println("Hi " + x);
+                                %>
                             </a></li>
                     </ul>
                 </div>
@@ -95,34 +101,33 @@
         <section class="sort-area commitments">
             <div class="container" style="width: 1170px;">
                 <div class="grid-x" style="width: 100%;">
-                <div class="large-12 cell">
-                    <div class="sort-btn">
-                        <a href="#" class="btn-sort">
-                            New Pledges <i class="fa fa-plus-circle"></i>
-                        </a>
+                    <div class="large-12 cell">
+                        <div class="sort-btn">
+                            <a href="#" class="btn-sort">
+                                New Pledges <i class="fa fa-plus-circle"></i>
+                            </a>
 
-                        <a href="#" class="btn-sort">
-                            My Pledges <i class="fa fa-book"></i>
-                        </a>
+                            <a href="#" class="btn-sort">
+                                My Pledges <i class="fa fa-book"></i>
+                            </a>
 
-                        <a href="#" class="btn-sort">
-                            My Profile <i class="fa fa-user"></i>
-                        </a>
-                        <a href="logout.jsp" class="btn-sort">
-                            Log Out <i class="fa fa-sign-out"></i>
-                        </a>
+                            <a href="#" class="btn-sort">
+                                My Profile <i class="fa fa-user"></i>
+                            </a>
+                            <a href="logout.jsp" class="btn-sort">
+                                Log Out <i class="fa fa-sign-out"></i>
+                            </a>
 
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
         <div id="app" class="grid-container fluid">
             <div class="grid-x">
                 <div class="large-10 cell frm_forms  with_frm_style frm_style_formidable-style-3">
                     <h6>Fields marked with an * are required for submission.</h6>
-                    <form action="projects" method="post" enctype="multipart/form-data" class="frm-show-form  frm_pro_form">
-                        <h3 class="frm_pos_top frm_section_spacing">About the pledge maker</h3>
+                    <form action="projects" method="post" enctype="multipart/form-data" class="frm-show-form  frm_pro_form" name="pledgeForm" onsubmit="return validateForm()">
                         <fieldset>
                             <label>ORGANISATION NAME *</label>
                             <input type="text" name="title" placeholder="Project Title">
@@ -142,12 +147,54 @@
                             <input type="email" name="email" placeholder="EMAIL">
                         </fieldset>
                         <fieldset>
-                            <label>Project Summary (in 280 characters)</label>
-                            <textarea rows="4" name="summary" placeholder="Project Summary"></textarea>
+                            <label>PHONE *</label>
+                            <input type="text" name="number" placeholder="PHONENUMBER">
                         </fieldset>
-                        <fieldset>
-                            <label>Upload Image</label>
-                            <input type="file" name="photo">
+                        <hr>
+                        <h6>TYPE OF PLEDGE (select all that apply) *</h6>
+                        <div class="grid-container">
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-4 cell">
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Financial</label>
+                                    <br>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Education and Training</label>
+                                    <br>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Issue and policy advocacy</label>
+                                    <br>
+                                    <!--                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>
+                                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>-->
+                                    <br>
+                                </div>
+                                <div class="large-4 cell">
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Technical assistance</label>
+                                    <br>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Direct provision of services and/or products</label>
+                                    <br>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Others (please specify)</label>
+                                    <br>
+                                    <!--                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>
+                                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>-->
+                                </div>
+                                <div class="large-4 cell">
+                                    <!--                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>
+                                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>
+                                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>
+                                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                                                        <br>
+                                                                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>-->
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset
+                            <label>PROVIDE A 200-WORD DESCRIPTION OF YOUR PLEDGE* </label>
+                            <textarea rows="4" name="summary"></textarea>
                         </fieldset>
                         <button type="submit" class="button success">Submit</button>
                     </form>
