@@ -83,7 +83,7 @@
             </div>
         </nav>
         <div id="app" class="container">
-            <h1 style="color: #003A70; font-weight: 500; text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> New Project has been successfully added</h1>
+            <h1 style="color: #003A70; font-weight: 500; text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> Browse projects</h1>
             <br>
             <!--row 1-->
             <div class="container grid-x">
