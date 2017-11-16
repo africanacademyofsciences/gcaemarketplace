@@ -83,7 +83,7 @@
 
                                     //                                String x = session.getAttribute("username").toString();
                                     //                                out.println("Hi " + x);
-                                %>
+%>
                             </a></li>
                     </ul>
                 </div>
@@ -114,7 +114,7 @@
                             <a href="#" class="btn-sort">
                                 My Profile <i class="fa fa-user"></i>
                             </a>
-                            <a href="logout.jsp" class="btn-sort">
+                            <a href="#" class="btn-sort">
                                 Log Out <i class="fa fa-sign-out"></i>
                             </a>
 
@@ -130,7 +130,7 @@
                     <form action="projects" method="post" enctype="multipart/form-data" class="frm-show-form  frm_pro_form" name="pledgeForm" onsubmit="return validateForm()">
                         <fieldset>
                             <label>ORGANISATION NAME *</label>
-                            <input type="text" name="title" placeholder="Project Title">
+                            <input type="text" name="title" placeholder="ORGANISATION MAME">
                         </fieldset>
                         <fieldset>
                             <label>TYPE OF INSTITUTE *</label>
@@ -154,31 +154,32 @@
                         <h6>TYPE OF PLEDGE (select all that apply) *</h6>
                         <div class="grid-container">
                             <div class="grid-x grid-padding-x">
-                                <div class="large-4 cell">
+                                <div class="large-6 cell">
                                     <input id="checkbox1" type="checkbox"><label for="checkbox1">Financial</label>
+                                    <!--<input type="text" id="finance" name="finance" disabled>-->
                                     <br>
-                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Education and Training</label>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Access to an international network of donors, investors and (corporate) partners</label>
                                     <br>
-                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Issue and policy advocacy</label>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Incubation facilities (office or laboratory space)</label>
                                     <br>
                                     <!--                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
                                                                         <br>
                                                                         <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>-->
                                     <br>
                                 </div>
-                                <div class="large-4 cell">
-                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Technical assistance</label>
+                                <div class="large-6 cell">
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Long or short term strategic partnership</label>
                                     <br>
-                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Direct provision of services and/or products</label>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Training</label>
                                     <br>
-                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Others (please specify)</label>
+                                    <input id="checkbox1" type="checkbox"><label for="checkbox1" onClick="addInput('dynamicInput');">Others (please specify)</label>
                                     <br>
                                     <!--                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
                                                                         <br>
                                                                         <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
                                                                         <br>-->
                                 </div>
-                                <div class="large-4 cell">
+                                <div class="">
                                     <!--                                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
                                                                         <br>
                                                                         <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
