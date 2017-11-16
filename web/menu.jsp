@@ -24,7 +24,7 @@
 
                 <div class="nav-mobile">
                     <ul class="left">
-                        <a href=""><img src="img/logo.png" width="155" height="55"></a>
+                        <a href=""><img src="img/logo2.png" width="280" height="120"></a>
                     </ul>
                     <ul class="right">
                         <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>

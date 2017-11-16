@@ -46,7 +46,7 @@ public class register extends HttpServlet {
             try {
                 //attempt to save data
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gcaemarketplace", "root", "303seminarian");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://69.16.238.208:3306/aascienc_gcaemarketplace", "aascienc_root", "303seminarian");
                 String sql = "INSERT into registration VALUES('" + sRegUsername + "','" +sRegEmail + "','" +registeras + "','" + sPassword + "')";
                 Statement st = conn.createStatement();
                 //change type of Resultset

@@ -25,8 +25,8 @@ import javax.servlet.http.Part;
 public class projects extends HttpServlet {
      
     // database connection settings
-    private String dbURL = "jdbc:mysql://localhost:3306/gcaemarketplace";
-    private String dbUser = "root";
+    private String dbURL = "jdbc:mysql://69.16.238.208:3306/aascienc_gcaemarketplace";
+    private String dbUser = "aascienc_root";
     private String dbPass = "303seminarian";
      
     protected void doPost(HttpServletRequest request,
