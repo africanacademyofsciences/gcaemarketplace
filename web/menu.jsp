@@ -41,7 +41,7 @@
             </div>
         </nav>
         <div id="app" class="grid-container fluid">
-            <a href="make-pledge.jsp">Add new project entry</a>
+            <a href="make-pledge.jsp" style="text-align: center; font-size: 22px;">Make a pledge <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a> 
         </div>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/vendor/what-input.js"></script>
