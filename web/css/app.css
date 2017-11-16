@@ -506,7 +506,7 @@ footer .prefooter-right {
     margin-top: 5px;
 }
 
-.container {
+/*.container {
     width: 1170px;
 }
 .container {
@@ -514,5 +514,49 @@ footer .prefooter-right {
 }
 .container {
     width: 750px;
+}*/
+
+/*//commitments*/
+.sort-area.commitments {
+    padding: 48px 0 60px;
+}
+.sort-area.commitments {
+    background-color: #f8f6f3;
+    padding: 15px 0 23px;
 }
 
+.sort-area.commitments .sort-btn {
+    float: right;
+}
+
+.sort-area.commitments .sort-btn a {
+    margin: 25px 10px;
+}
+.btn-sort {
+    font-size: 16px;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    border-color: #f9c213;
+    padding: 7px 45px 7px 10px;
+    line-height: 1.2;
+    font-family: futura-pt,sans-serif;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+    color: #f9c213;
+}
+a {
+    color: #2086c7;
+    text-decoration: none;
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}

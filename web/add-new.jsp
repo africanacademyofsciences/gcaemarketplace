@@ -73,26 +73,51 @@
                         <li><a href="projects.jsp"><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Featured Projects</a></li>
                         <li><a data-scroll href="#"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> News and Events</a></li>
                         <li style="font-size: 18.5px;"><a href="">
-                            <%
-                                
-//                                String x = session.getAttribute("username").toString();
-//                                out.println("Hi " + x);
-                            %>
-                        </a></li>
+                                <%
+
+    //                                String x = session.getAttribute("username").toString();
+    //                                out.println("Hi " + x);
+%>
+                            </a></li>
                         <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-                        <section class="page-opener blue commitment">
-                            <div class="container grid-x">
-                                <div class="large-12 cell">
-                                    <div class="page-opener-content">
-                                        <h1>Make a pledge</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+        <section class="page-opener blue commitment">
+            <div class="container grid-x" style="width: 1170px;">
+                <div class="large-8 cell">
+                    <div class="page-opener-content">
+                        <h1>Make a pledge</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sort-area commitments">
+            <div class="container" style="width: 1170px;">
+                <div class="grid-x" style="width: 100%;">
+                <div class="large-12 cell">
+                    <div class="sort-btn">
+                        <a href="#" class="btn-sort">
+                            New Pledges <i class="fa fa-plus-circle"></i>
+                        </a>
+
+                        <a href="#" class="btn-sort">
+                            My Pledges <i class="fa fa-book"></i>
+                        </a>
+
+                        <a href="http://www.everywomaneverychild.org/your-profile/" class="btn-sort">
+                            My Profile <i class="fa fa-user"></i>
+                        </a>
+                        <a href="http://www.everywomaneverychild.org/logout/?_wpnonce=5e83d471ae" class="btn-sort">
+                            Log Out <i class="fa fa-sign-out"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
         <div id="app" class="grid-container fluid">
             <h6>Fields marked with an * are required for submission.</h6>
             <div class="grid-x">
