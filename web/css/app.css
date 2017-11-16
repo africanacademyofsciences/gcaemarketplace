@@ -460,3 +460,59 @@ footer .prefooter-right {
 .projecttitle:hover{
     color: #003A70;
 }
+
+.page-opener.commitment.blue {
+    background-color: #003A70;
+    background-image: url(../img/back5.png);
+    background-blend-mode: multiply;
+}
+
+
+.page-opener.blue {
+    background-color: #003A70;
+    background-image: url(../img/pattern/pttrn-blue.png);
+}
+.page-opener {
+    padding: 175px 0 50px;
+    background-repeat: repeat;
+}
+
+.page-opener.commitment.blue .page-opener-content {
+    border-color: #D08B0B;
+}
+.page-opener.blue .page-opener-content {
+    border-color: #fff;
+}
+.page-opener .page-opener-content {
+    border-width: 12px;
+    border-style: solid;
+    padding: 10px 30px 20px;
+}
+
+
+.page-opener .page-opener-content h1{
+    font-size: 50px;
+}
+.page-opener .page-opener-content h1 {
+    font-size: 40px;
+}
+.page-opener .page-opener-content h1 {
+    font-size: 33px;
+}
+.page-opener .page-opener-content h1 {
+    line-height: 1.1;
+    color: #fff;
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+.container {
+    width: 1170px;
+}
+.container {
+    width: 970px;
+}
+.container {
+    width: 750px;
+}
+

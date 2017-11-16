@@ -1,11 +1,8 @@
 <%-- 
-    Document   : FEATURED PROJECTS
-    Created on : Sep 19, 2017, 3:06:48 PM
+    Document   : make-pledge
+    Created on : Nov 16, 2017, 8:14:48 AM
     Author     : kimaiga
 --%>
-
-<%@page import="java.io.OutputStream"%>
-<%@page import="java.io.InputStream"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
 <%--<%@include file="retrieve_image.jsp"%>--%>
 <jsp:useBean id="dbConn" scope="request" class="com.gca.db.DBProperties"/>
@@ -39,8 +36,6 @@
     } catch (Exception e) {
         e.printStackTrace();
     }
-
-
 %>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
@@ -48,7 +43,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FEATURED PROJECTS| E-Market Place</title>
+        <title>FEATURED PROJECTS| Make a Pledge</title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -84,7 +79,7 @@
             </div>
         </nav>
         <div id="app" class="container">
-            <h1 style="color: #003A70; font-weight: 500; text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> New Project has been successfully added</h1>
+            <!--<h1 style="color: #003A70; font-weight: 500; text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> New Project has been successfully added</h1>-->
             <br>
             <!--row 1-->
             <div class="container grid-x">

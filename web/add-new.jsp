@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Add New |GC Africa E-Market Place</title>
+        <title>GC Africa E-Market Place | Make a pledge</title>
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -75,8 +75,8 @@
                         <li style="font-size: 18.5px;"><a href="">
                             <%
                                 
-                                String x = session.getAttribute("username").toString();
-                                out.println("Hi " + x);
+//                                String x = session.getAttribute("username").toString();
+//                                out.println("Hi " + x);
                             %>
                         </a></li>
                         <li><a href="logout.jsp"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
@@ -84,8 +84,17 @@
                 </div>
             </div>
         </nav>
+                        <section class="page-opener blue commitment">
+                            <div class="container grid-x">
+                                <div class="large-12 cell">
+                                    <div class="page-opener-content">
+                                        <h1>Make a pledge</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
         <div id="app" class="grid-container fluid">
-            <h4>Add New Project</h4>
+            <h6>Fields marked with an * are required for submission.</h6>
             <div class="grid-x">
                 <div class="large-8 cell">
                     <form action="projects" method="post" enctype="multipart/form-data">
